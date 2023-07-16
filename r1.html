@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>r1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="r1.css">
+    
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-dark py-0">
+        <div class="container-fluid">
+          <a class="navbar-brand text-primary px-2" href="#">SAI AUTO</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <nav>
+            <ul>
+              <li><a href="main.html">Home</a></li>
+              <li><a href="Product.html">Products</a></li>
+              <li><a href="About Us.html">About Us</a></li>
+              <li><a href="login.html">Login</a></li>
+            </ul>
+        
+          </nav>
+        </div></nav>
+    
+
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha38>4-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script>
+        function registration()
+	{
+
+		var name= document.getElementById("t1").value;
+		var email= document.getElementById("t2").value;
+		var uname= document.getElementById("t3").value;
+		var pwd= document.getElementById("t4").value;			
+		var cpwd= document.getElementById("t5").value;
+		
+        //email id expression code
+		var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+		var letters = /^[A-Za-z]+$/;
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+		if(name=='')
+		{
+			alert('Please enter your name');
+		}
+		else if(!letters.test(name))
+		{
+			alert('Name field required only alphabet characters');
+		}
+		else if(email=='')
+		{
+			alert('Please enter your user email id');
+		}
+		else if (!filter.test(email))
+		{
+			alert('Invalid email');
+		}
+		else if(uname=='')
+		{
+			alert('Please enter the user name.');
+		}
+		else if(!letters.test(uname))
+		{
+			alert('User name field required only alphabet characters');
+		}
+		else if(pwd=='')
+		{
+			alert('Please enter Password');
+		}
+		else if(cpwd=='')
+		{
+			alert('Enter Confirm Password');
+		}
+		else if(!pwd_expression.test(pwd))
+		{
+			alert ('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
+		}
+		else if(pwd != cpwd)
+		{
+			alert ('Password not Matched');
+		}
+		else if(document.getElementById("t5").value.length < 6)
+		{
+			alert ('Password minimum length is 6');
+		}
+		else if(document.getElementById("t5").value.length > 12)
+		{
+			alert ('Password max length is 12');
+		}
+		else
+		{				                            
+               alert('Thank You for Login & You are Redirecting to Campuslife Website');
+			   // Redirecting to other page or webste code. 
+			   window.location = "http://www.campuslife.co.in"; 
+		}
+	}
+	function clearFunc()
+	{
+		document.getElementById("t1").value="";
+		document.getElementById("t2").value="";
+		document.getElementById("t3").value="";
+		document.getElementById("t4").value="";
+		document.getElementById("t5").value="";
+	}
+
+
+        
+        
+    </script>
+    <div id="main">
+        <div class="h-tag">
+            <h2 ><b>Registration</b></h2>
+        </div>
+        <div class="login">
+            <table cellspacing="2" align="center" cellpadding="8" border="0">
+                <tr>
+                    <td align="right">Enter Name :</td>
+                    <td><input type="text" placeholder="enter user here" id="t1" class="tb"></td>
+                </tr>
+                <tr>
+                    <td align="right">Enter Email ID :</td>
+                    <td><input type="text" placeholder="enter Email ID here" id="t2" class="tb"></td>
+                </tr>
+                <tr>
+                    <td align="right">Enter userName :</td>
+                    <td><input type="text" placeholder="enter username here" id="t3" class="tb"></td>
+                </tr>
+                <tr>
+                    <td align="right">Enter password :</td>
+                    <td><input type="text" placeholder="enter password here" id="t4" class="tb"></td>
+                    <tr>
+                        <td align="right">Enter confirm password :</td>
+                        <td><input type="text" placeholder="enter password here" id="t5" class="tb"></td>
+                        <br>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="reset" value="clear form" onclick="clearFunc()" id="res" class="btn"/>
+                            <input type="submit" value="Registration" onclick="registration()" id="res" class="btn"/>
+                        </td>
+                    </tr>
+                </tr>
+            </table>
+        </div>
+    </div>
+   
+   
+</body>
+</html>

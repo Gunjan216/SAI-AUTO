@@ -1,0 +1,80 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: century Gothic;
+}
+fieldset{
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/back_pic/04/06/69/4958106611a2dbe.jpg");
+    height: 100vh;
+    width: 100%;
+    margin: 150px;
+    background-size: cover;
+    background-position: center;
+    border-color: black;
+}
+nav ul{
+    Float:right;
+    list-style-type: none;
+    margin-top: 20px;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    transition: 0.6s ease;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+}
+nav ul li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+.discribe{
+    position: absolute;
+    color: #000;
+    font-size: 20px;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%,-50%);   
+}
+.fan{
+    size: 10px;
+    color: aliceblue;
+    background-color: black;
+    height: 50px;
+}
+.title
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.title h1{
+    color: #ee9003;
+    font-size: 100px;
+}
+.button
+{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);   
+}
+.bttn{
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 10px 30px;
+    color: white;
+    transition: 0.6s ease;
+    text-decoration: none;
+}
+.bttn:hover{
+    background-color: #fff;
+    color: #000;
+
+}
